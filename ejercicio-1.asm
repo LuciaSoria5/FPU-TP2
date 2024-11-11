@@ -13,18 +13,15 @@ lenFormato equ $ - formato
 section .text
 global CMAIN
 CMAIN:
-    mov ebp, esp; for correct debugging
+    mov ebp, esp
     fld qword [valor_a]
     fld qword [valor_b]
     fld qword [valor_c]
     fld qword [valor_d]
     fld qword [valor_e]
 
-    push dword 48
-    push formato
     call imprimir
     
-    add esp, 8
     mov eax, 1
     xor ebx, ebx
     int 0x80
@@ -35,9 +32,4 @@ imprimir:
     mov ecx, formato
     mov edx, lenFormato
     int 0x80
-    
-    mov eax, 1
-    mov ebx, 0
-    int 0x80
-    
     ret
