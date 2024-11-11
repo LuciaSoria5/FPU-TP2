@@ -6,8 +6,8 @@ section .data
     resultado dd 0.0                   ; Almacenar el resultado de la suma
 
 section .text
-global CMAIN
-CMAIN:
+global main
+main:
     mov ebp, esp; for correct debugging
     
     mov ecx, [n]                       ; Cargar el número de elementos del vector en ECX
