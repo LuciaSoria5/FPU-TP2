@@ -2,7 +2,7 @@
 
 section .data
     vector dd 1.0, 2.0, 3.0, 4.0, 5.0  ; Vector de números en punto flotante SP
-    n dd 5                             ; Número de elementos en el vector
+    n db 5                             ; Número de elementos en el vector
     resultado dd 0.0                   ; Almacenar el resultado de la suma
 
 section .text
